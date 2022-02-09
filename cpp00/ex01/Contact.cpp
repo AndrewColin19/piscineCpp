@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:06:54 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/08 14:43:42 by acolin           ###   ########.fr       */
+/*   Updated: 2022/02/09 17:10:50 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,9 @@ std::string Contact::getphoneNumber(void) const
 std::string Contact::getdsecret(void) const
 {
 	return (this->dsecret);
+}
+
+std::string Contact::getInfo(void) const
+{
+	
 }

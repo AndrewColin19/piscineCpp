@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:02:07 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/08 14:24:03 by acolin           ###   ########.fr       */
+/*   Updated: 2022/02/09 17:13:45 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ public:
 	std::string getnickname(void) const;
 	std::string getphoneNumber(void) const;
 	std::string getdsecret(void) const;
+
+	std::string getInfo(void) const;
 };
