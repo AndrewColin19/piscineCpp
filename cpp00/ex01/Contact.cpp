@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:06:54 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/09 17:10:50 by acolin           ###   ########.fr       */
+/*   Updated: 2022/02/15 11:43:37 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,36 @@ std::string Contact::getdsecret(void) const
 	return (this->dsecret);
 }
 
+std::string Contact::get_ten_c(std::string str) const
+{
+	std::string s;
+
+	if (str.size() == 10)
+		return (str);
+	else if (str.size() < 9) 
+	{
+		for (int i = 0; i < 10 - str.size();i++)
+			s.push_back(' ');
+		s += str;	
+	}
+	else
+	{
+		for (int i = 0; i < 9; i++)
+			s.push_back(str.at(i));
+		s.push_back('.');
+	}
+	return (s);
+}
+
 std::string Contact::getInfo(void) const
 {
-	
+	std::string s;
+
+	s += this->get_ten_c(this->getfname());
+	s.push_back('|');
+	s += this->get_ten_c(this->getlname());
+	s.push_back('|');
+	s += this->get_ten_c(this->getnickname());
+	s.push_back('|');
+	return (s);
 }

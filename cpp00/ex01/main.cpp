@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:02:01 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/09 17:14:49 by acolin           ###   ########.fr       */
+/*   Updated: 2022/02/15 11:12:17 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ int	main()
 	PhoneBook rep = PhoneBook();
 	std::string str;
 
-	while(1)
+	while(!std::cin.eof())
 	{
 		std::cin >> str;
-		if (EOF)
-			break ;
 		if (str == "ADD")
 			rep.add();
 		else if (str == "SEARCH")
