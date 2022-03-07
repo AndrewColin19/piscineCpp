@@ -6,13 +6,13 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:30:01 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/15 11:52:49 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/07 19:49:40 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : last(-1), maxsize(10)
+PhoneBook::PhoneBook() : last(-1), nb(0)
 {
 }
 
@@ -45,7 +45,12 @@ void PhoneBook::add()
 	std::cin >> str;
 	c.setdsecret(str);
 	if (last < 7)
+	{
+		this->nb++;
 		this->last++;
+	}
+	else
+		this->last = 0;
 	this->tabContact[last] = c;
 	std::cout << "contact add\n";
 }
@@ -53,11 +58,23 @@ void PhoneBook::add()
 void PhoneBook::search()
 {
 	int size;
+	int	index;
+	std::string str;
 
 	std::cout << "   index  |   name   | lastname | nickname |\n";
 	if (this->last > -1)
 	{
-		for (int i = 0; i < last + 1; i++)
+		for (int i = 0; i < nb; i++)
 			std::cout << std::setw(10) << std::setfill(' ') << i + 1 << "|" << tabContact[i].getInfo() << "\n";
 	}
+	std::cout << "index contact : ";
+	std::cin >> str;
+	index = std::atoi(str.c_str());
+	if (index >= 1 && index <= 8)
+	{
+		std::cout << std::endl;
+		tabContact[index - 1].aff();
+	}
+	else
+		std::cout << "index Ivalide\n";
 }

@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 14:06:54 by acolin            #+#    #+#             */
-/*   Updated: 2022/02/15 11:43:37 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/07 19:48:38 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,13 @@ std::string Contact::getInfo(void) const
 	s += this->get_ten_c(this->getnickname());
 	s.push_back('|');
 	return (s);
+}
+
+void	Contact::aff(void) const
+{
+	std::cout << "first name : " << this->getfname() << std::endl;
+	std::cout << "last name : " << this->getlname() << std::endl;
+	std::cout << "nickname : " << this->getnickname() << std::endl;
+	std::cout << "phoneNumber : " << this->getphoneNumber() << std::endl;
+	std::cout << "dark secret : " << this->getdsecret() << std::endl;
 }
