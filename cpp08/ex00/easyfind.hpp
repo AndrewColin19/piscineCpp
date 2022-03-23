@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 16:20:20 by acolin            #+#    #+#             */
-/*   Updated: 2022/03/23 16:29:21 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/23 17:06:07 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	easyfind(T &tab, int oc)
 
 	while (i != tab.end())
 	{
-		if (*i == value)
+		if (*i == oc)
 			return (index);
 		i++, index++;
 	}
