@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:42:15 by acolin            #+#    #+#             */
-/*   Updated: 2022/03/16 14:52:07 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/17 14:49:02 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Cat::Cat(const Cat &copy) : Animal()
 Cat &	Cat::operator=(const Cat &copy)
 {
 	this->_type = copy._type;
+	this->_brain = new Brain(*copy._brain);
 	std::cout << "Cat assignation operator called" << std::endl;
 	return (*this);
 }

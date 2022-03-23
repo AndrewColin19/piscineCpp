@@ -19,13 +19,13 @@
 
 int main(void)
 {
-	Bureaucrat *A = new Bureaucrat("Axel", 1);
+	Bureaucrat *A = new Bureaucrat("bob1", 1);
 	std::cout << A << std::endl;
 	
 	try {
-		Form *formS = new ShrubberyCreationForm("maison");
-		Form *formR = new RobotomyRequestForm("Mathias");
-		Form *formP = new PresidentialPardonForm("Mathias");
+		Form *formS = new ShrubberyCreationForm("home");
+		Form *formR = new RobotomyRequestForm("bob2");
+		Form *formP = new PresidentialPardonForm("bob2");
 		std::cout << formS << std::endl;
 		std::cout << formR << std::endl;
 		std::cout << formP << std::endl;

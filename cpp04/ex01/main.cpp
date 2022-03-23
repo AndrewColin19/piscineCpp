@@ -6,7 +6,7 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/16 13:41:26 by acolin            #+#    #+#             */
-/*   Updated: 2022/03/16 14:44:57 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/17 14:48:33 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int	main(void)
 {
-	Animal	*animals[10];
+	/*Animal	*animals[10];
 
 	// On cree 10 chiens et 10 chats
 	for (int i = 0; i < 5; i++)
@@ -29,7 +29,13 @@ int	main(void)
 		animals[i]->makeSound();
 	// On supprime tous les animaux
 	for (int i = 0; i < 10; i++)
-		delete animals[i];
+		delete animals[i];*/
 
+	Cat cat;
+	Cat *tmp = new Cat(cat);
+
+	delete tmp;
+	
+	
 	return (0);
 }

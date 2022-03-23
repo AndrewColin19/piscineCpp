@@ -26,15 +26,13 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 void	ShrubberyCreationForm::execute(const Bureaucrat & executor) const
 {
 	std::fstream file;
-	std::string str;
 	
 	if (executor.getGrade() > this->getGradeToExec())
 		throw Form::GradeTooLowException();
 	if (!this->isSigned())
 		throw Form::NotSignedException();
 
-	str = this->_target + "_shrubbery";
-	file.open((std::string) str, std::ios::out);
+	file.open((std::string) this->_target + "_shrubbery", std::ios::out);
 	file << "   w     w\n  www   www\n wwwww wwwww\n   w     w\n";
 	file.close();
 }
