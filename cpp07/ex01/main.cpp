@@ -6,11 +6,11 @@
 /*   By: acolin <acolin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 15:43:00 by acolin            #+#    #+#             */
-/*   Updated: 2022/03/23 15:47:17 by acolin           ###   ########.fr       */
+/*   Updated: 2022/03/23 16:10:36 by acolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iter.hpp>
+#include "iter.hpp"
 
 void	put_char(char c)
 { std::cout << c; }
@@ -18,7 +18,7 @@ void	put_char(char c)
 void	put_string(char *str)
 {
 	while (str && *str)
-		put_char(*str++);
+		put_char(std::toupper(*str++));
     put_char('\n');
 }
 

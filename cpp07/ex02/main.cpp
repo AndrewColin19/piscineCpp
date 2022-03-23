@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <Array.hpp>
+#include "Array.hpp"
 
 #define MAX_VAL 10
 
@@ -60,6 +60,6 @@ int main(int, char**)
     {
         std::cout << "N[" << i << "]=" << numbers[i] << "\n";
     }
-    delete [] mirror;//
+    delete[] mirror;
     return 0;
 }
