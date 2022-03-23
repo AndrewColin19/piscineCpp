@@ -12,7 +12,7 @@
 
 #include "Base.hpp"
 
-Base *	generate(void)
+Base*	generate(void)
 {
 	srand(time(NULL));
 	switch (rand() % 3)
@@ -26,7 +26,7 @@ Base *	generate(void)
 	}
 }
 
-void	identify(Base * p)
+void	identify(Base *p)
 {
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
@@ -36,23 +36,23 @@ void	identify(Base * p)
 		std::cout << "C" << std::endl;
 }
 
-void	identify(Base & p)
+void	identify(Base &p)
 {
 	try {
 		(void) dynamic_cast<A&>(p);
 		std::cout << "A" << std::endl;
 	}
-	catch (std::exception & e) {
+	catch (std::exception &e) {
 		try {
 			(void) dynamic_cast<B&>(p);
 			std::cout << "B" << std::endl;
 		}
-		catch (std::exception & e) {
+		catch (std::exception &e) {
 			try {
 				(void) dynamic_cast<C&>(p);
 				std::cout << "C" << std::endl;
 			}
-			catch (std::exception & e) { }
+			catch (std::exception &e) { }
 		}
 	}
 }
